@@ -12,8 +12,19 @@ public class BallBase : MonoBehaviour
         GetComponent<Rigidbody>();
     }
 
+    void OnEnable()
+    {
+        StartCoroutine(TimerToDisable());
+    }
+
     void OnTriggerEnter(Collider other)
     {
+        gameObject.SetActive(false);
+    }
+
+    private IEnumerator TimerToDisable()
+    {
+        yield return new WaitForSeconds(3);
         gameObject.SetActive(false);
     }
         

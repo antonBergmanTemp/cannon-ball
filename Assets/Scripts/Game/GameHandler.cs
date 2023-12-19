@@ -16,7 +16,7 @@ public class GameHandler : MonoBehaviour
     public void Update()
     {
         RotationModule.Rotate(InputModule.InputRotation);
-
+        KeyBoardInput();
     }
 
     private void KeyBoardInput()
