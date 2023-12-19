@@ -9,6 +9,7 @@ public class Rotatebase : RotateAxis
     [SerializeField]
     private Vector2 current;
 
+
     void Awake()
     {
         ApplyRotation();
