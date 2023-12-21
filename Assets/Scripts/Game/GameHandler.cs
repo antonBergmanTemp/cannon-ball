@@ -1,17 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameHandler : MonoBehaviour
 {
+    public static GameHandler GameInstance;
 
-    
     public PlayerInput InputModule;
+
+    private PlayerInput s_inpout, fdfdfd;
 
     public Rotatebase RotationModule;
     public Shootbase shootModule;
 
     public UIHandler uiModule;
+
+    void Awake()
+    {
+        GameInstance = this;
+    }
 
     public void Update()
     {
@@ -26,4 +34,6 @@ public class GameHandler : MonoBehaviour
             shootModule.Shoot();
         }
     }
+
+
 }

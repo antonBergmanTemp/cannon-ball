@@ -6,10 +6,9 @@ public class BallBase : MonoBehaviour
 {
     public Rigidbody Rigidbody;
 
-
     void Start()
     {
-        GetComponent<Rigidbody>();
+        Rigidbody = GetComponent<Rigidbody>();
     }
 
     void OnEnable()

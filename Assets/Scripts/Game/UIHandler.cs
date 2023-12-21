@@ -6,10 +6,27 @@ using UnityEngine.UI;
 
 public class UIHandler : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI scoreText;
+    private const string ScoreKey = "ScoreKey";
 
-    public void SetScore(string text)
+    [SerializeField] private TextMeshProUGUI scoreText;
+    private int _xp = 0;
+
+    void Start()
     {
-        scoreText.text = text;
+        PlayerPrefs.GetInt(ScoreKey);
+
+        SetScore(0);
+
+
+    }
+
+    public void SetScore(int xp)
+    {
+        scoreText.text = $"Score: {_xp += xp}";
+    }
+
+    void OnDestroy()
+    {
+        PlayerPrefs.SetInt(ScoreKey, _xp);
     }
 }

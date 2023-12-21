@@ -742,6 +742,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   axis: {fileID: 566874989}
   current: {x: 0, y: 0}
+  rotationRange:
+    min: 0
+    max: 0
   origin: {fileID: 570174405}
   coeff: {x: 100, y: 50}
 --- !u!114 &570174405
@@ -758,6 +761,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   axis: {fileID: 566874989}
   current: {x: 0, y: 0}
+  rotationRange:
+    min: -10
+    max: 10
 --- !u!114 &570174406
 MonoBehaviour:
   m_ObjectHideFlags: 0
